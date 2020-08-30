@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Edit profile{% endblock title %}
+
+{% block content %}
+
+
+<div class="container p-2">
+    <header>
+        <h1>Edit your profile</h1>
+    </header>
+
+    <section>
+        <form method="post">
+            <div class="form-group">
+              <label for="profile-name">Name</label>
+              <input class="form-control" type="text" id="profile-name" name="profile-name" value={{ user.name }} />
+            </div>
+            <div class="form-group">
+              <label for="profile-email">Email</label>
+              <input class="form-control" type="email" id="profile-email" name="profile-email" value={{ user.email }} />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit changes</button>
+            <a class="btn btn-secondary" href="/profile">Cancel</a>
+        </form>
+    </section>
+</div>
+<div class="container p-2">
+    <header>
+        <h1>Change your password (optional)</h1>
+        <p>If you want to change your password, you have to fill the input fields below. In other case, leave them empty!</p>
+    </header>
+
+    <section>
+        <form>
+            <div class="form-group">
+              <label for="old-password">Old password</label>
+              <input class="form-control" type="password" id="old-password" name="old-password"/>
+            </div>
+            <div class="form-group">
+              <label for="new-password">New password</label>
+              <input class="form-control" type="password" id="new-password" name="new-password"/>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit changes</button>
+            <a class="btn btn-secondary" href="/profile">Cancel</a>
+        </form>
+    </section>
+</div>
+
+{% endblock content %}

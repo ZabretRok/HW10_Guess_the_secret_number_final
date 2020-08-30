@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock title %}
+
+{% block content %}
+<ul>
+    <li>Your name: {{ user.name }} </li>
+    <li>Your email: {{ user.email }} </li>
+</ul>
+
+<p><a href="/profile/edit">EDIT profile</a></p>
+<p><a href="/profile/delete">DELETE profile</a></p>
+{% endblock content %}

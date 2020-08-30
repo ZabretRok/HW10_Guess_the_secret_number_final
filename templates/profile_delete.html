@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Delete profile{% endblock title %}
+
+{% block content %}
+<div class="container p-2">
+    <header>
+        <h1>Delete your profile</h1>
+    </header>
+
+    <section>
+        <form method="post">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a class="btn btn-secondary" href="/profile">Cancel</a>
+        </form>
+    </section>
+</div>
+
+{% endblock content %}
